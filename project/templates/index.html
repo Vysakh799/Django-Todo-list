@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-list</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <h1>Todo-list</h1>
+        </div>
+        <div class="container">
+            <div class="form">
+                <form action="../index" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="list" id="" style="height: 25px;border-radius: 10px;padding-left: 9px; border: 2px solid rgb(187, 186, 186);">
+                    <input type="submit" name="" id="" value="Add">
+                </form>
+            </div>
+            <div class="table">
+                <table border="1">
+                    <tr>
+                        <th>Date</th>
+                        <th>Content</th>
+                    </tr>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{i.date}}</td>
+                        <td>{{i.list}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
