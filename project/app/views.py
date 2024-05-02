@@ -21,13 +21,12 @@ def index(request):
         except IndexError:
              print("Invalid date format. Please use MM/DD/YY.")
 
-
         
         list=request.POST['list']
         try:
             data=todo.objects.get(list=list)
             print(data)
-            return HttpResponse("list alreadt exist pls update it")
+            return HttpResponse("list already exist pls update it")
         except:
             pass
         data=todo.objects.create(date=formatted_date,list=list)

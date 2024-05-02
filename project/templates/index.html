@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo-list</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'sample.css' %}">
 </head>
 <body>
     <div class="main">
@@ -14,10 +14,10 @@
         </div>
         <div class="container">
             <div class="form">
-                <form action="../index" method="POST">
+                <form action="../" method="POST">
                     {% csrf_token %}
-                    <input type="text" name="list" id="" style="height: 25px;border-radius: 10px;padding-left: 9px; border: 2px solid rgb(187, 186, 186);">
-                    <input type="submit" name="" id="" value="Add">
+                    <input type="text" name="list" id="inp" style="height: 25px;width: 50%; border-radius: 10px;padding-left: 9px; border: 2px solid rgb(187, 186, 186);">
+                    <input type="submit" name="" id="btn1" value="Add">
                 </form>
             </div>
             <div class="table">
