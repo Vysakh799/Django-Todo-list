@@ -21,12 +21,11 @@ body{
 }
 .container{
     background-color: rgb(226, 192, 42);
-    width: fit-content;
+    min-width: 700px;
     padding: 15px;
     margin-top: 10%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    
 }
 .form{
     height: 60px;
@@ -38,7 +37,7 @@ body{
     margin-top: 11px;
 }
 table{
-    width: 600px;
+    width: 700px;
     height: 100px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
